@@ -1,0 +1,133 @@
+.page_sec {
+    padding: 60px 0;
+}
+.main_title {
+    font-size: 26px;
+    font-weight: bold;
+    position: relative;
+}
+
+.main_title::after {
+    content: '';
+    width: 35px;
+    height: 1px;
+    background-color: #7334ff;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    transform: rotate(-1deg);
+    bottom: -15px;
+}
+
+.top_news {
+    padding: 50px 0;
+}
+
+.news_img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    height: 295px;
+}
+
+.news_list .news_img {
+    height: 200px;
+}
+
+.news_title {
+    display: flex;
+    gap: 20px;
+    align-items: top;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+
+.news_content {
+    padding-left: 20px;
+}
+
+.news_title a {
+    border-radius: 50%;
+    background-color: #f7f4f4;
+    border: 1px solid #f7f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 45px;
+    height: 45px;
+    transition: 0.5s;
+}
+
+.news_title a:hover {
+    transition: 0.5s;
+    border-color: #6a6969;
+}
+.news_title img {
+    width: 25px;
+}
+
+.news_text a {
+    text-decoration: none;
+    color: #6a6969;
+    border: 1px solid #f4f7f7;
+    padding: 5px 15px;
+    display: inline-block;
+    background-color: #f7f4f4;
+    transition: 0.5s;
+    border-radius: 25px;
+}
+
+.news_text a:hover {
+    border-color: #6a6969;
+    transition: 0.5s;
+}
+
+.news_text p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    color: #6a6969;
+    /* number of lines to show */
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.news_list .news_content .news_text p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.news_list {
+    padding-top: 30px;
+}
+
+.news_list .main_title {
+    margin-bottom: 30px;
+}
+
+.news_list .top_news {
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.news_list .top_news:last-child {
+    border: none;
+}
+
+.news_list .news_content {
+    padding-left: 0;
+}
+
+.logo {
+    width: auto;
+    height: 50px;
+    object-fit: contain;
+}
+.allreadybookmark{
+    background-color: #338de1 !important;    
+    cursor: not-allowed;
+}

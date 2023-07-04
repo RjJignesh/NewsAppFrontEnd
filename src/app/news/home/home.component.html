@@ -1,0 +1,53 @@
+<section class="page_sec">
+    <div class="container">    
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="main_title">Top News</h2>
+                <div class="top_news">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-5">
+                            <img [src]="TopNews.imagePath" class="news_img" alt="top news image">
+                        </div>
+                        <div class="col-md-6 col-lg-7">
+                            <div class="news_content">
+                                <div class="news_title">
+                                    <h3>{{TopNews.title}}</h3>  
+                                    <a [ngClass]="{'allreadybookmark': TopNews.isBookMark == true}" (click)="bookMarkNews(TopNews.id)"><img src="../assets/images/bookMark.svg"></a> 
+                                </div>
+                                <div class="news_text">
+                                    <p>{{TopNews.detail}}</p>  
+                                    <a href="#">{{TopNews.provider}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="news_list" *ngIf="isNewsDataLoded">
+                    <h2 class="main_title">All News</h2>
+                    <div class="top_news" *ngFor="let news of newsList">
+                        <div class="row">
+                            <div class="col-md-3 col-lg-2">
+                                <img [src]="news.imagePath" class="news_img" alt="news image">
+                            </div>
+                            <div class="col-md-9 col-lg-10">
+                                <div class="news_content ">
+                                    <div class="news_title">                                  
+                                        <h3>{{news.title}}</h3>  
+                                        <a [ngClass]="{'allreadybookmark': news.isBookMark == true}" (click)="bookMarkNews(news.id)"><img src="../assets/images/bookMark.svg">                                           
+                                        </a>
+                                    </div>
+                                    <div class="news_text">
+                                      <p>{{news.detail}}</p>
+                                      <a href="#">{{news.provider}}</a>                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>       
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 

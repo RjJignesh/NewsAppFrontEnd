@@ -1,0 +1,30 @@
+<section class="page_sec">
+    <div class="container">
+        <div class="row">  
+            <div class="col-md-12">
+                <div class="news_list">
+                    <h2 class="main_title">Bookmark News</h2>
+                    <div class="top_news" *ngFor="let news of bookmarkList">
+                        <div class="row">
+                            <div class="col-md-3 col-lg-2">
+                                <img [src]="news.imagePath" class="news_img" alt="news image">
+                            </div>
+                            <div class="col-md-9 col-lg-10">
+                                <div class="news_content ">
+                                    <div class="news_title">
+                                        <h3>{{news.title}}</h3>  
+                                        <a [ngClass]="{'allreadybookmark': news.isBookMark == true}"><img src="../assets/images/bookMark.svg"></a>
+                                    </div>
+                                    <div class="news_text">
+                                      <p>{{news.detail}}</p>
+                                      <a href="#">{{news.provider}}</a>                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>       
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

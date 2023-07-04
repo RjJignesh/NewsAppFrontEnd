@@ -17,8 +17,19 @@ export class NewsapiService {
     return this.httpClient.get(url);
    }
 
-  searchNews(param:string,endpoint: string):Observable<any> {        
-          const url = `${this.baseUrl}/${endpoint}=${param}`;
+   getAllBookmarkNews(endpoint: string): Observable<any> {
+    const url = `${this.baseUrl}/${endpoint}`;
+    return this.httpClient.get(url);
+   }
+
+   bookmarkNews(newsId: string,endpoint: string):Observable<any> {     
+
+    const url = `${this.baseUrl}/${endpoint}=${newsId}`;
+    return this.httpClient.get(url); 
+   }
+
+  searchNews(param:string,endpoint: string,isbookmarksearch:string):Observable<any> {          
+          const url = `${this.baseUrl}/${endpoint}=${param+isbookmarksearch}`;          
           return this.httpClient.get(url); 
       }
 

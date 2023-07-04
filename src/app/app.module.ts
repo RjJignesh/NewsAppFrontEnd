@@ -6,11 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NewsModule } from './news/news.module';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    // NewsComponent,
+    // BookmarkComponent
   ],
   imports: [
+    NewsModule,
     FormsModule,
     BrowserModule,
     ReactiveFormsModule,
